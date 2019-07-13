@@ -16,14 +16,14 @@ class Option extends Component {
         const optionLetter = this.props.optionObj.letter;
         
 
-        console.log(this.props.optionScore)
+        console.log(optionLetter)
         
         return (
             <div className="step-option">
                 <label>
                     <input type="radio" 
-                        name={"option-" + this.props.questionId} 
-                        onChange={() => this.props.changeScore(optionScore)}
+                        name={"option-" + this.props.questionId}
+                        onChange={() => this.props.changeScore(optionScore, optionLetter)}
                     />
                     { optionText } — { optionScore }
                 </label>
