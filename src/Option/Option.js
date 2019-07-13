@@ -11,9 +11,13 @@ class Option extends Component {
 
     render() {
 
-        const {optionText} = this.props;
-        const optionScore = this.props.optionScore;
+        const optionText = this.props.optionObj.text;
+        const optionScore = this.props.optionObj.score;
+        const optionLetter = this.props.optionObj.letter;
+        
+
         console.log(this.props.optionScore)
+        
         return (
             <div className="step-option">
                 <label>

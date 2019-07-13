@@ -9,9 +9,9 @@ class Question extends Component {
     optionsOutput = this.questionObj.options.map(theOption => {
         return <Option 
                     key={theOption.id} 
+                    optionObj={theOption}
+
                     questionId={this.questionObj.id} 
-                    optionText={theOption.text} 
-                    optionScore={theOption.score} 
                     changeScore={this.props.changeScore} 
                 />
     });
