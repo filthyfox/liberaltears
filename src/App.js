@@ -10,6 +10,7 @@ class App extends Component {
 		isTestStarted: false,
 		isTestFinished: false,
 		currentStep: 1,
+		currentStepScore: 0,
 		myQuestions: myQuestions,
 		userScore: 0,
 	}
