@@ -11,15 +11,19 @@ class Option extends Component {
 
     render() {
 
-        const {optionText} = this.props;
-        const optionScore = this.props.optionText;
-        console.log(optionText)
+        const optionText = this.props.optionObj.text;
+        const optionScore = this.props.optionObj.score;
+        const optionLetter = this.props.optionObj.letter;
+        
+
+        console.log(optionLetter)
+        
         return (
             <div className="step-option">
                 <label>
                     <input type="radio" 
                         name={"option-" + this.props.questionId}
-                        onChange={() => this.props.changeScore(optionScore)}
+                        onChange={() => this.props.changeScore(optionScore, optionLetter)}
                     />
                     { optionText } — { optionScore }
                 </label>
