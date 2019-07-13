@@ -12,13 +12,13 @@ class Option extends Component {
     render() {
 
         const {optionText} = this.props;
-        const optionScore = this.props.optionScore;
-        console.log(this.props.optionScore)
+        const optionScore = this.props.optionText;
+        console.log(optionText)
         return (
             <div className="step-option">
                 <label>
                     <input type="radio" 
-                        name={"option-" + this.props.questionId} 
+                        name={"option-" + this.props.questionId}
                         onChange={() => this.props.changeScore(optionScore)}
                     />
                     { optionText } — { optionScore }
