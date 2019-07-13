@@ -14,6 +14,23 @@ class App extends Component {
 		myQuestions: myQuestions,
 		userScore: 0,
 		totalScore: 0,
+
+		totalLetters: [
+
+			A: {
+				score: 2
+			},
+
+			B: {
+				score: 1
+			},
+
+			C: {
+				score: 0
+			},
+
+		]
+
 	}
 
 
