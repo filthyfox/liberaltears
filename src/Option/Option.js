@@ -13,7 +13,7 @@ class Option extends Component {
 
         const {optionText} = this.props;
         const optionScore = this.props.optionScore;
-
+        console.log(this.props.optionScore)
         return (
             <div className="step-option">
                 <label>

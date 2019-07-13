@@ -12,21 +12,24 @@ class App extends Component {
 		currentStep: 1,
 		myQuestions: myQuestions,
 		userScore: 0,
+		totalScore: 0,
 	}
 
 
 	switchStepNext = () => {
-		if( this.state.currentStep < this.state.myQuestions.length ){
+		let {userScore, totalScore} = this.state
+		
 			var nextStep = this.state.currentStep + 1;
 			this.setState({
-				currentStep: nextStep
+				currentStep: nextStep,
+				totalScore: totalScore += userScore
 			})
-		}
+		
 	}
 
 
 	changeScore = (optionScore) => {
-		var newScore = this.state.userScore + optionScore;
+		var newScore =+ optionScore;
 		this.setState({
 			userScore: newScore
 		})
